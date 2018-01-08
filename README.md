@@ -17,6 +17,7 @@ The runner can be executed with `python runner.py`, this will allow users to man
 
 The grader file (provided by Coatue) can be run using `python grader.py python -u runner.py`, this will test the classifier against a small test data and return the number of invocations needed by the Autocomplete program.
 
+Note that I have modified the original grader file to change the decoding codec from `utf8` to `latin-1` since `utf8` decoding is not compatible with some of the data.
 
 
 
