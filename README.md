@@ -11,7 +11,7 @@ Implementation-wise, I used a trie-based approach. Specifically, I loaded the tr
 
 ## Usage
 
-Note that the reviews and metadata should be on the same directory as the Python scripts. Since the review and metadata files are huge, I have only included a fragment of them for example.
+Note that the reviews and metadata should be on the same directory as the Python scripts. Since the review and metadata files are huge, I have only included a fragment of them for example. (If you actually want to run this, then the runner file should be accordingly edited to only train this small fragment of data.)
 
 The runner can be executed with `python runner.py`, this will allow users to manually input any string fragment into the terminal.
 
