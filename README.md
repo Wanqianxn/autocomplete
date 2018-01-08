@@ -11,7 +11,7 @@ Implementation-wise, I used a trie-based approach. Specifically, I loaded the tr
 
 ## Usage
 
-Note that the reviews and metadata should be on the same directory as the Python scripts. 
+Note that the reviews and metadata should be on the same directory as the Python scripts. Since the review and metadata files are huge, I have only included a fragment of them for example.
 
 The runner can be executed with `python runner.py`, this will allow users to manually input any string fragment into the terminal.
 
@@ -21,4 +21,4 @@ Note that I have modified the original grader file to change the decoding codec 
 
 
 
- 
+
