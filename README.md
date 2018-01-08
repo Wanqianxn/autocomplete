@@ -4,11 +4,10 @@ This is an Autocomplete program in Python, done for the Coatue Hack4Alpha Challe
 
 ## Approach
 
-I employed a Naive Bayesian classifier. Given a partial string fragment, the calculated probability for any completed string is proportional to the frequency of the string in the training data, as well as the frequency of the string for the particular reviewer, movie and rating. As per Bayes' Rule, 
-
-$$ \mathbb{P}(\text{completed word}|\text{fragment}, \text{metadata}) \propto \mathbb{P}(\text{completed word}) \mathbb{P}(\text{rating}|\text{completed word})\mathbb{P}(\text{user}|\text{completed word})\mathbb{P}(\text{movie}|\text{completed word})$$
+I employed a Naive Bayesian classifier. Given a partial string fragment, the calculated probability for any completed string is proportional to the overall frequency of the completed string in the training data, as well as the frequency of the string for the particular reviewer, movie and rating, as per Bayes' Rule. The classifier treats punctuation as normal characters too.
 
 Implementation-wise, I used a trie-based approach. Specifically, I loaded the training data into two tries -- one trie parsed each movie review by word (i.e. space-separated) and the other parsed a movie review by string length (i.e. the first 6 characters, then the next 6 characters, and so long). This was because the by-word approach worked better if the test data contains a movie or user that the training data has not seen before (presumably since all reviews must share common English words), whereas the by-string-length approach worked better for known movies or users (since it can better predict specific character sequences, e.g. *"harry potter"*). Given the size of the training data, it made sense to employ both approaches since the test data set is unknown.
+
 
 ## Usage
 
